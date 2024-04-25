@@ -29,29 +29,29 @@ public class TelegramNotificador extends TelegramLongPollingBot{
 	
 	@Override
 	public void onUpdateReceived(Update update) {
-		 Message msg = update.getMessage();
-		 User user = msg.getFrom();
-		 
-		 if(msg.getText().subSequence(0, 6).equals("/start")) {
-				
-				if(msg.getText().length()==6) {
-					enviarMensaje(user.getId(), this.NOHAYCOMANDO);
-					return;
-				}
-				
-				String nombreComisariaIngresadaPorParametro = (String) msg.getText().subSequence(7, msg.getText().length());
-				Comisaria comisaria = comisariaRepo.findBynombre(nombreComisariaIngresadaPorParametro.toUpperCase());
-				
-				System.out.println(nombreComisariaIngresadaPorParametro);
-				
-				if(comisaria!=null) {
-					comisaria.setIdComisariaTelegram(user.getId());
-					comisariaRepo.save(comisaria);
-					enviarMensaje(user.getId(), this.NUEVACOMISARIA+ comisaria.getNombre());
-					return;
-				}
-				
-				enviarMensaje(user.getId(), this.NOHAYCOMISARIA);
+//		 Message msg = update.getMessage();
+//		 User user = msg.getFrom();
+//		 
+//		 if(msg.getText().subSequence(0, 6).equals("/start")) {
+//				
+//				if(msg.getText().length()==6) {
+//					enviarMensaje(user.getId(), this.NOHAYCOMANDO);
+//					return;
+//				}
+//				
+//				String nombreComisariaIngresadaPorParametro = (String) msg.getText().subSequence(7, msg.getText().length());
+//				Comisaria comisaria = comisariaRepo.findBynombre(nombreComisariaIngresadaPorParametro.toUpperCase());
+//				
+//				System.out.println(nombreComisariaIngresadaPorParametro);
+//				
+//				if(comisaria!=null) {
+//					comisaria.setIdComisariaTelegram(user.getId());
+//					comisariaRepo.save(comisaria);
+//					enviarMensaje(user.getId(), this.NUEVACOMISARIA+ comisaria.getNombre());
+//					return;
+//				}
+//				
+//				enviarMensaje(user.getId(), this.NOHAYCOMISARIA);
 			
 				
 		 }
@@ -70,16 +70,16 @@ public class TelegramNotificador extends TelegramLongPollingBot{
 	}
 
 	public void enviarMensaje(Long id,String mensaje) {		
-		SendMessage sm = SendMessage.builder()
-                .chatId(id.toString()) 
-                .text(mensaje).build();    
-		try {
-		    execute(sm);                        
-			} 
-		catch (TelegramApiException e) {
-		    throw new RuntimeException(e);      
-			
-		}
+//		SendMessage sm = SendMessage.builder()
+//                .chatId(id.toString()) 
+//                .text(mensaje).build();    
+//		try {
+//		    execute(sm);                        
+//			} 
+//		catch (TelegramApiException e) {
+//		    throw new RuntimeException(e);      
+//			
+//		}
 	
 	}
 	
