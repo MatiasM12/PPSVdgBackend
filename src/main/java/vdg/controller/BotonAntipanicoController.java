@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-//import org.springframework.web.client.RestTemplate;
+import org.springframework.web.client.RestTemplate;
 //import org.telegram.telegrambots.meta.TelegramBotsApi;
 //import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 //import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
@@ -187,25 +187,25 @@ public class BotonAntipanicoController {
 	
 	
 
-//	@Bean
-//	public RestTemplate restTemplate() {
-//	    return new RestTemplate();
-//	}
+	@Bean
+	public RestTemplate restTemplate() {
+	    return new RestTemplate();
+	}
 //	
-//	@Bean
-//	public HttpHeaders HttpHeaders() {
-//		HttpHeaders header = new HttpHeaders();
-//	    return header ;
-//	}
+	@Bean
+	public HttpHeaders HttpHeaders() {
+		HttpHeaders header = new HttpHeaders();
+	    return header ;
+	}
 //	
-//	@Bean RestTemplateBuilder restTemplateBuilder(){
-//		
-//		return new RestTemplateBuilder();
-//	}
+	@Bean RestTemplateBuilder restTemplateBuilder(){
+		
+		return new RestTemplateBuilder();
+	}
 //	
-//	@Bean NormalizacionCoordenadas normalizacionCoordenadas(){
-//		return new NormalizacionCoordenadas(this.restTemplateBuilder());
-//	}
+	@Bean NormalizacionCoordenadas normalizacionCoordenadas(){
+		return new NormalizacionCoordenadas(this.restTemplateBuilder());
+	}
 //	
 //	
 //	@Bean
