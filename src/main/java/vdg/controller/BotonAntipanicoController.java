@@ -18,10 +18,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
-import org.telegram.telegrambots.meta.TelegramBotsApi;
-import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
+//import org.springframework.web.client.RestTemplate;
+//import org.telegram.telegrambots.meta.TelegramBotsApi;
+//import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
+//import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
 import antlr.collections.List;
 import springfox.documentation.spring.web.json.Json;
@@ -37,7 +37,7 @@ import vdg.model.email.EmailGateway;
 import vdg.model.logica.PuntoCercano;
 import vdg.model.notificacionesTerceros.CuerpoMensaje;
 import vdg.model.notificacionesTerceros.CuerpoNotificacion;
-import vdg.model.notificacionesTerceros.TelegramNotificador;
+//import vdg.model.notificacionesTerceros.TelegramNotificador;
 import vdg.model.notificacionesTerceros.WpNotificador;
 import vdg.repository.BotonAntipanicoRepository;
 import vdg.repository.ComisariaRepository;
@@ -68,7 +68,7 @@ public class BotonAntipanicoController {
 	
 	@Autowired private ComisariaRepository  comisariaRepo;
 	
-	@Autowired private TelegramNotificador telegramNotificador;
+	//@Autowired private TelegramNotificador telegramNotificador;
 	
 	
 	@Value("${servicioMensajeria}")
