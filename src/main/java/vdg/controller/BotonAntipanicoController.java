@@ -115,8 +115,8 @@ public class BotonAntipanicoController {
 		Comisaria comisaria = this.puntoMasCercano.puntoMasCercano(new BigDecimal(lat),new BigDecimal(lon),comisariasMunicipio);
 		String nroTelefono = comisaria.getTelefono();
 		
-		if(comisaria.getIdComisariaTelegram()!=null) 
-			this.telegramNotifador().enviarMensaje(comisaria.getIdComisariaTelegram(), "Alerta en lat :"+lat+ "long"+ lon);
+		//if(comisaria.getIdComisariaTelegram()!=null) 
+			//this.telegramNotifador().enviarMensaje(comisaria.getIdComisariaTelegram(), "Alerta en lat :"+lat+ "long"+ lon);
 		
 		//this.wpNotificador.notificar(configurarCuerpo(nroTelefono));
 		return comisaria;
@@ -135,8 +135,8 @@ public class BotonAntipanicoController {
 		Comisaria comisaria = this.puntoMasCercano.puntoMasCercano(new BigDecimal(lat),new BigDecimal(lon),comisariasMunicipio);
 		String nroTelefono = comisaria.getTelefono();
 		
-		if(comisaria.getIdComisariaTelegram()!=null) 
-			this.telegramNotifador().enviarMensaje(comisaria.getIdComisariaTelegram(), "Alerta en lat :"+lat+ "long"+ lon);
+		//if(comisaria.getIdComisariaTelegram()!=null) 
+			//this.telegramNotifador().enviarMensaje(comisaria.getIdComisariaTelegram(), "Alerta en lat :"+lat+ "long"+ lon);
 		
 		//this.wpNotificador.notificar(configurarCuerpo(nroTelefono));
 		return comisaria;
