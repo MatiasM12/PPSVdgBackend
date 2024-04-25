@@ -58,8 +58,8 @@ public class BotonAntipanicoController {
 	@Autowired
 	private PersonaController personaController;
 	
-	@Autowired
-	private WpNotificador  wpNotificador;
+	//@Autowired
+	//private WpNotificador  wpNotificador;
 	
 	@Autowired
 	private NormalizacionCoordenadas normalizador;
