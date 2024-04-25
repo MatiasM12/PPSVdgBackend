@@ -187,36 +187,36 @@ public class BotonAntipanicoController {
 	
 	
 
-	@Bean
-	public RestTemplate restTemplate() {
-	    return new RestTemplate();
-	}
-	
-	@Bean
-	public HttpHeaders HttpHeaders() {
-		HttpHeaders header = new HttpHeaders();
-	    return header ;
-	}
-	
-	@Bean RestTemplateBuilder restTemplateBuilder(){
-		
-		return new RestTemplateBuilder();
-	}
-	
-	@Bean NormalizacionCoordenadas normalizacionCoordenadas(){
-		return new NormalizacionCoordenadas(this.restTemplateBuilder());
-	}
-	
-	
-	@Bean
-     TelegramNotificador telegramNotifador() throws TelegramApiException {
-		   TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
-		   TelegramNotificador bot = new TelegramNotificador(); 
-		   
-		   //We moved this line out of the register method, to access it later
-		   botsApi.registerBot(bot);
-		   return bot;  
-	}
+//	@Bean
+//	public RestTemplate restTemplate() {
+//	    return new RestTemplate();
+//	}
+//	
+//	@Bean
+//	public HttpHeaders HttpHeaders() {
+//		HttpHeaders header = new HttpHeaders();
+//	    return header ;
+//	}
+//	
+//	@Bean RestTemplateBuilder restTemplateBuilder(){
+//		
+//		return new RestTemplateBuilder();
+//	}
+//	
+//	@Bean NormalizacionCoordenadas normalizacionCoordenadas(){
+//		return new NormalizacionCoordenadas(this.restTemplateBuilder());
+//	}
+//	
+//	
+//	@Bean
+//     TelegramNotificador telegramNotifador() throws TelegramApiException {
+//		   TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
+//		   TelegramNotificador bot = new TelegramNotificador(); 
+//		   
+//		   //We moved this line out of the register method, to access it later
+//		   botsApi.registerBot(bot);
+//		   return bot;  
+//	}
 	
 	
 	
