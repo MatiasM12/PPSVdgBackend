@@ -39,7 +39,7 @@ drop database vdg;
 
 create database vdg;
 
-use vdg;	
+use railway;	
 
 CREATE TABLE `Grupo` (
   `idGrupo` int AUTO_INCREMENT NOT NULL,
